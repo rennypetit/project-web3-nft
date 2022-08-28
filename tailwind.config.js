@@ -5,6 +5,12 @@ module.exports = {
 	],
 	theme: {
 		extend: {},
+		fontFamily: {
+			almendra: ['Almendra', 'serif'],
+			poppins: ['Poppins', 'sans-serif'],
+			rubik: ['Rubik', 'sans-serif'],
+			sanchez: ['Sanchez', 'serif'],
+		},
 	},
 	plugins: [],
 };
