@@ -1,0 +1,59 @@
+{
+    "team": [
+        {
+            "name": "Aitor Zaldua",
+            "role": "Developer",
+            "social": {
+                "linkedin": "aitor-zaldua",
+                "twitter": "azdraft_",
+                "github": "aitorzaldua",
+                "platzi": ""
+            },
+            "img": "https://avatars.githubusercontent.com/u/59438933?v=4"
+        },
+        {
+            "name": "Santiago Somoza",
+            "role": "Developer",
+            "social": {
+                "linkedin": "santiago-somoza-005660197",
+                "twitter": "",
+                "github": "santi1234567",
+                "platzi": ""
+            },
+            "img": "https://avatars.githubusercontent.com/u/45318759?v=4"
+        },
+        {
+            "name": "Renny Petit",
+            "role": "Developer",
+            "social": {
+                "linkedin": "",
+                "twitter": "",
+                "github": "rennypetit",
+                "platzi": ""
+            },
+            "img": "https://avatars.githubusercontent.com/u/24458818?v=4"
+        },
+        {
+            "name": "Anas Bouhanassa",
+            "role": "Developer",
+            "social": {
+                "linkedin": "",
+                "twitter": "",
+                "github": "anasklm",
+                "platzi": ""
+            },
+            "img": "https://avatars.githubusercontent.com/u/105330623?v=4"
+        },
+        {
+            "name": "Andrés Díaz",
+            "role": "Developer",
+            "social": {
+                "linkedin": "andiazo",
+                "twitter": "__andiazo__",
+                "github": "andiazo",
+                "platzi": "_andiazo_"
+            },
+            "img": "https://avatars.githubusercontent.com/u/36974713?v=4"
+        }
+    ]
+}

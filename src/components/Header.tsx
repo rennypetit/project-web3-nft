@@ -35,6 +35,9 @@ const Header = () => {
 							<Link href='/admin'>
 								<a className='text-base text-white'>Admin</a>
 							</Link>
+							<Link href='/team'>
+								<a className='text-base text-white'>Team</a>
+							</Link>
 						</Popover.Group>
 						<div className='hidden md:flex items-center justify-end md:flex-1 lg:w-0'>
 							<Button text='Wallet' />
