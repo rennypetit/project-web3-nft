@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+import Link from 'next/link';
 import { Popover, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Button from './Button';
@@ -9,9 +10,11 @@ const Header = () => {
 				<div className='w-11/12 mx-auto px-0'>
 					<div className='flex justify-between items-center border-gray-100 py-6 md:justify-start md:space-x-10'>
 						<div className='flex justify-start lg:w-0 lg:flex-1'>
-							<a href='#' className='text-white font-almendra'>
-								POKEMONGAME<span className='font-bold'>.card</span>
-							</a>
+							<Link href='/'>
+								<a className='text-white font-almendra'>
+									POKEMONGAME<span className='font-bold'>.card</span>
+								</a>
+							</Link>
 						</div>
 						<div className='-mr-2 -my-2 md:hidden'>
 							<Popover.Button className='bg-transparent border border-yellow-500 rounded-md shadow-sm text-base rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500'>
@@ -23,15 +26,15 @@ const Header = () => {
 							as='nav'
 							className='font-poppins font-normal hidden md:flex space-x-10'
 						>
-							<a href='#' className='text-base text-white'>
-								Lottery
-							</a>
-							<a href='#' className='text-base text-white'>
-								Collection
-							</a>
-							<a href='#' className='text-base text-white'>
-								Admin
-							</a>
+							<Link href='/lottery'>
+								<a className='text-base text-white'>Lottery</a>
+							</Link>
+							<Link href='/collection'>
+								<a className='text-base text-white'>Collection</a>
+							</Link>
+							<Link href='/admin'>
+								<a className='text-base text-white'>Admin</a>
+							</Link>
 						</Popover.Group>
 						<div className='hidden md:flex items-center justify-end md:flex-1 lg:w-0'>
 							<Button text='Wallet' />
@@ -56,9 +59,11 @@ const Header = () => {
 							<div className='py-0 pb-6 px-5 pb-0'>
 								<div className='flex items-center justify-between'>
 									<div>
-										<a href='#' className='text-white font-almendra'>
-											POKEMONGAME<span className='font-bold'>.card</span>
-										</a>
+										<Link href='/'>
+											<a className='text-white font-almendra'>
+												POKEMONGAME<span className='font-bold'>.card</span>
+											</a>
+										</Link>
 									</div>
 									<div className='-mr-2'>
 										<Popover.Button className='bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500'>
@@ -70,25 +75,23 @@ const Header = () => {
 							</div>
 							<div className='py-6 px-5 space-y-6'>
 								<div className='font-poppins font-normal grid gap-y-4 gap-x-8 justify-center text-center'>
-									<a
-										href='#'
-										className='text-base text-gray-900 hover:text-gray-700'
-									>
-										Lottery
-									</a>
+									<Link href='/lottery'>
+										<a className='text-base text-gray-900 hover:text-gray-700'>
+											Lottery
+										</a>
+									</Link>
 
-									<a
-										href='#'
-										className='text-base text-gray-900 hover:text-gray-700'
-									>
-										Collection
-									</a>
-									<a
-										href='#'
-										className='text-base text-gray-900 hover:text-gray-700'
-									>
-										Admin
-									</a>
+									<Link href='/collection'>
+										<a className='text-base text-gray-900 hover:text-gray-700'>
+											Collection
+										</a>
+									</Link>
+
+									<Link href='/admin'>
+										<a className='text-base text-gray-900 hover:text-gray-700'>
+											Admin
+										</a>
+									</Link>
 								</div>
 								<div className='text-center m-0'>
 									<Button text='Wallet' />
