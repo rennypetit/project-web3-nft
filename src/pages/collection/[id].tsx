@@ -1,5 +1,4 @@
 import type { NextPage } from 'next';
-import Button from '../../components/Button';
 import Card from '../../components/Card';
 import Information from '../../components/Information';
 const Lottery: NextPage = () => {
