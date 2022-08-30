@@ -8,7 +8,6 @@ const Layout = ({ children }) => {
 			<div className='Layout flex min-h-screen flex-wrap w-full'>
 				{children}
 			</div>
-			<Footer />
 		</>
 	);
 };
