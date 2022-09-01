@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Popover, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Button from './Button';
+import WalletButton from './WalletButton';
 const Header = () => {
 	return (
 		<header>
@@ -40,7 +41,7 @@ const Header = () => {
 							</Link>
 						</Popover.Group>
 						<div className='hidden md:flex items-center justify-end md:flex-1 lg:w-0'>
-							<Button text='Wallet' />
+							<WalletButton text='Wallet' />
 						</div>
 					</div>
 				</div>
@@ -97,7 +98,7 @@ const Header = () => {
 									</Link>
 								</div>
 								<div className='text-center m-0'>
-									<Button text='Wallet' />
+									<WalletButton text='Wallet' />
 								</div>
 							</div>
 						</div>
