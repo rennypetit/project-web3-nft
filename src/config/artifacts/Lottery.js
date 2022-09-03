@@ -1,6 +1,7 @@
 const LotteryArtifact = {
     address: {
     // TODO: include address of the contract
+        5: ''
     },
     abi: [
         {

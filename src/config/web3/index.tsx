@@ -7,7 +7,7 @@ const connector = new InjectedConnector({
   ],
 });
 
-const getLibrary = (provider) => {
+const getLibrary = (provider: any) => {
   return new Web3(provider);
 };
 
