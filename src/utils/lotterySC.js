@@ -12,4 +12,15 @@ export class Web3Proposal {
         contractAddress
     )
   }
+
+  async startLottery(tokenId, nftContractAddress, bettingPrice, beneficiaryAddress) {
+    const accounts = await this.web3.eth.getAccounts()
+    const receipt = await this.lotteryContract.methods
+      .startLottery(tokenId, nftContractAddress, bettingPrice, beneficiaryAddress)
+      .send({
+        from: accounts[0]
+      })
+
+    return receipt
+  }
 }
