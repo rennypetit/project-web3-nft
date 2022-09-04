@@ -11,11 +11,11 @@ export class Web3Proposal {
 
 	// Write Contract
 	async buyTicket() {
-    // TODO
-  }
+		// TODO
+	}
 	async onERC721Received() {
-    // TODO
-  }
+		// TODO
+	}
 	async pickTheWinner(lotteryId) {
 		const accounts = await this.web3.eth.getAccounts();
 		const receipt = await this.lotteryContract.methods
@@ -24,11 +24,11 @@ export class Web3Proposal {
 		return receipt;
 	}
 	async rawFulfillRandomWords() {
-    // TODO
-  }
+		// TODO
+	}
 	async requestRandomWords() {
-    // TODO
-  }
+		// TODO
+	}
 	async startLottery(
 		tokenId,
 		nftContractAddress,
@@ -61,18 +61,18 @@ export class Web3Proposal {
 
 	// Read Contract
 	async getContractBalance() {
-    // TODO
-  }
+		// TODO
+	}
 	async getLottery() {
-    // TODO
-  }
+		// TODO
+	}
 	async owner() {
-    // TODO
-  }
+		// TODO
+	}
 	async s_randomWords() {
-    // TODO
-  }
+		// TODO
+	}
 	async s_requestId() {
-    // TODO
-  }
+		// TODO
+	}
 }
