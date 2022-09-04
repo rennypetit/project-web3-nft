@@ -1,10 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&display=swap');
 html,
 body {
+  background: #0f0232;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
+
 
 a {
   color: inherit;
@@ -15,12 +20,45 @@ a {
   box-sizing: border-box;
 }
 
+.Layout {
+  min-height: calc(100vh - 130px);
+}
+
+.container-card-collection {
+  display: grid;width: 80%;
+  margin: auto;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+.Card {
+    background: rgba(61, 61, 61, 0.37);
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 22px;
+    transform: matrix(1, 0, -0.08, 1, 0, 0);
+    padding: 30px;
+}
+
+.Mascara {
+  background: rgba(61, 61, 61, 0.37);
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  filter: blur(100px);
+  border-radius: 22px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.back {
+  z-index: 10;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
   body {
     color: white;
-    background: black;
   }
 }
