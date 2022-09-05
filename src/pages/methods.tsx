@@ -21,7 +21,7 @@ const methods = () => {
 	/* one */
 	const getData = useCallback(async () => {
 		if (lottery && nft) {
-			const response = await services.methodGetLottery(lottery);
+			const response = await services.methodGetLottery(lottery, 0);
 			console.log(response);
 		}
 	}, [nft, lottery, account]);

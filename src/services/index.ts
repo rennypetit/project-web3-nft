@@ -7,8 +7,8 @@ class Services {
 		return await getLotteryCount(lottery)
 	}
 
-	async methodGetLottery(lottery) {
-		return await GetLottery(lottery);
+	async methodGetLottery(lottery, i) {
+		return await GetLottery(lottery, i);
 	}
 
 	async methodPostSafeMint(nft, account) {

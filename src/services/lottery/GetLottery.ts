@@ -1,5 +1,5 @@
-const GetLottery = async (lottery) => {
-	return await lottery.methods.getLottery(0).call();
+const GetLottery = async (lottery: any, i: any) => {
+	return await lottery.methods.getLottery(i).call();
 };
 
 export default GetLottery;
