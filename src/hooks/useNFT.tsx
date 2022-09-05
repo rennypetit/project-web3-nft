@@ -1,17 +1,17 @@
 import { useMemo } from 'react';
 import { useWeb3React } from '@web3-react/core';
-import LotteryArtifact from '@config/artifacts/Lottery';
+import NFTArtifact from '@config/artifacts/NFT';
 
-const { address, abi } = LotteryArtifact;
+const { address, abi } = NFTArtifact;
 
-const useLottery = () => {
+const useNFT = () => {
 	const { active, library, chainId } = useWeb3React();
 
-	const lottery = useMemo(() => {
+	const NFT = useMemo(() => {
 		if (active) return new library.eth.Contract(abi, address[chainId]);
 	}, [active, chainId, library?.eth?.Contract]);
 
-	return lottery;
+	return NFT;
 };
 
-export default useLottery;
+export default useNFT;
