@@ -4,9 +4,7 @@ const ContentLeft = () => {
 	return (
 		<div className='z-10'>
 			<h1 className='text-2xl text-center font-josef font-bold leading-1 md:text-8xl xxs:text-5xl'>
-				Bet and win an <br />
-				exclusive Pokemon card <br />
-				<span className='text-yellow-500 font-josef font-bold '>NFT</span>
+				Best <span className='text-yellow-500 font-josef font-bold '>NFT</span>s Giveaways <br />
 			</h1>
 
 			<div className='bg-gradient-to-r from-indigo-500/20 via-purple-500/20 to-pink-500/20 rounded-3xl p-4 2xl:w-1/2 xl:w-1/2 lg:w-1/2 md:w-3/5 sm:w-3/5 xxs:w-3/4 mx-auto '>
