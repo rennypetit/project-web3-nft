@@ -1,8 +1,9 @@
 import { useMemo } from 'react';
 import { useWeb3React } from '@web3-react/core';
-import LotteryArtifact from '@config/artifacts/Lottery';
+// import LotteryArtifact from '@config/artifacts/Lottery';
+import newLotteryArtifact from '@config/artifacts/newLottery';
 
-const { address, abi } = LotteryArtifact;
+const { address, abi } = newLotteryArtifact;
 
 const useLottery = () => {
 	const { active, library, chainId } = useWeb3React();

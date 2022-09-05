@@ -14,11 +14,16 @@ const BuyTicket = () => {
     const [data, setData] = useState(null);
     const [activeLotteries, setActiveLotteries] = useState([{}]);
     const [lottoToBuy, setLottoToBuy] = useState();
+    const [lotteryCount, setLotteryCount] = useState();
 
     const getData = useCallback(async () => {
         if (lottery && nft) {
             // l.nftOwner, l.nftContractAddress, l.bettingPrice, l.activeLottery, l.players, l.lotteryBalance, l.lotteryWinner, l.endDate
             const response = await services.methodGetLottery(lottery);
+            const countToSet = await services.methodGetLotteryCount(lottery);
+            if(countToSet) {
+                setLotteryCount(countToSet);
+            }
             if (response) {
                 const nftOwner = response[0]
                 const nftContractAddress = response[1]
@@ -67,6 +72,7 @@ const BuyTicket = () => {
                     <h1 className='mb-5 text-center font-josef text-1xl m-0 pt-0 lg:text-2xl'>
                         CHOOSE
                     </h1>
+                    <p>Count {lotteryCount}</p>
                     <p>
                         <div>
                         {activeLotteries[1] ? <LotteryCard lotto={activeLotteries[1]} /> : 'There is not lotteries'}

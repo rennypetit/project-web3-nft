@@ -1,8 +1,12 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { GetLottery, PostStartLottery, PostBuyTicket } from './lottery';
+import { GetLottery, PostStartLottery, PostBuyTicket, getLotteryCount } from './lottery';
 import { PostApprove, PostSafeMint } from './nft';
 
 class Services {
+	async methodGetLotteryCount(lottery: any) {
+		return await getLotteryCount(lottery)
+	}
+
 	async methodGetLottery(lottery) {
 		return await GetLottery(lottery);
 	}
