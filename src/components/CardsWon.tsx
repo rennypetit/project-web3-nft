@@ -11,10 +11,10 @@ const CardsWon = (props: any) => {
 					height='291'
 					layout='responsive'
 				/>
-				<p className='text-center pt-4 font-poppins font-medium'>{props.name}</p>
-				<p>Price: {props.price} ETH</p>
-                <p>Participants: {props.ParNum}</p>
-				<p>Winner: {props.WinName}</p>
+				<p className='text-white text-center pt-4 font-poppins font-medium'>{props.name}</p>
+				<p className='text-white'>Price: {props.price} ETH</p>
+                <p className='text-white'>Participants: {props.ParNum}</p>
+				<p className='text-white'>Winner: {props.WinName}</p>
 			</div>
 		</>
 	);

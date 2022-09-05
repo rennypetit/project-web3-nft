@@ -29,8 +29,8 @@ const Header = () => {
 							<Link href='/lottery'>
 								<a className='text-base text-white'>Lottery</a>
 							</Link>
-							<Link href='/collection'>
-								<a className='text-base text-white'>Collection</a>
+							<Link href='/winners'>
+								<a className='text-base text-white'>Winners</a>
 							</Link>
 							<Link href='/admin'>
 								<a className='text-base text-white'>Admin</a>
