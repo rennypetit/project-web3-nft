@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { Popover, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import ContainerButton from './web3/ContainerButtons';
+import Image
+ from 'next/image';
 const Header = () => {
 	return (
 		<header>
@@ -11,9 +13,7 @@ const Header = () => {
 					<div className='flex justify-between items-center border-gray-100 py-6 md:justify-start md:space-x-10'>
 						<div className='flex justify-start lg:w-0 lg:flex-1'>
 							<Link href='/'>
-								<a className='text-white font-almendra'>
-									POKEMONGAME<span className='font-bold'>.card</span>
-								</a>
+								<Image src="/images/logo-nft.png" className='object-scale-down z-10 w-96 sm:w-56 xxs:w-32' alt="Logo"  width={200} height={96} />
 							</Link>
 						</div>
 						<div className='-mr-2 -my-2 md:hidden'>
