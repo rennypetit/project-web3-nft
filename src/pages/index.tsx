@@ -13,7 +13,6 @@ const Home: NextPage = () => {
 					className='mainBackground z-0 fixed top-0 w-full object-fill'
 				/>
 			</div>
-			aa
 		</div>
 	);
 };
