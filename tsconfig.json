@@ -18,6 +18,9 @@
       "@config/*": [
         "config/*"
       ],
+      "@services/*": [
+        "services/*"
+      ],
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
