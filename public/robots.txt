@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://project-web3-nft.vercel.app/sitemap.xml
