@@ -36,7 +36,7 @@ const Winners: NextPage = () => {
 						if (!item.activeLottery) {
 							return <CardsWon key={index} name={item.lotteryWinner} beneficiary={item.beneficiaryAddress} nftContract={item.nftContractAddress}/>
 						}
-					}) : <p className='text-center'>Loading ...</p> }
+					}) : <p className='text-center text-white'>Loading ...</p> }
 				</div>
 			</div>
 
