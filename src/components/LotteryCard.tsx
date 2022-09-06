@@ -31,12 +31,11 @@ const LotteryCard = (props: any) => {
 	const handleBuy = () => {
 		let buyTicket = props.lotto.bettingPrice
 		let _lotteryId = props.lotto.id
-		console.log(">id",props.lotto)
-		// const data = {
-		// 	buyTicket,
-		// 	_lotteryId,
-		// };
-		// services.methodBuyTicket(lottery, account, data);
+		const data = {
+			buyTicket,
+			_lotteryId,
+		};
+		services.methodBuyTicket(lottery, account, data);
 	};
 
 	return (
@@ -54,14 +53,13 @@ const LotteryCard = (props: any) => {
 				<p>Owner: {truncated(props.lotto.nftOwner)}</p>
 				<p>Nft contract: {truncated(props.lotto.nftContractAddress)}</p>
 				<p>Betting price: {bettingPrice} eth</p>
-				<p>Is active: {props.lotto.activeLottery ? 'true' : 'false'}</p>
 				<p>Players: {props.lotto.players.length}</p>
 				<p>Balance: {lotteryBalance} eth</p>
 				{props.lotto.lotteryWinner ===
 				'0x0000000000000000000000000000000000000000' ? (
 					<p>Winner: No winner </p>
 				) : (
-					<p>Winner: {props.lotto.lotteryWinner}</p>
+					<p>Winner: {truncated(props.lotto.lotteryWinner)}</p>
 				)}
 				<p>End date: {dateString}</p>
 				<p>Beneficiary {truncated(props.lotto.beneficiaryAddress)}</p>

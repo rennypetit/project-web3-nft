@@ -50,11 +50,10 @@ const BuyTicket = () => {
 				Buy ticket
 			</h1>
 			<div>
-				<div className='mt-10 flex flex-wrap bg-gradient-to-r from-indigo-500/40 via-purple-500/40 to-pink-500/40 rounded-3xl'>
-					<h1 className='mb-5 text-center font-josef text-1xl m-0 pt-0 lg:text-2xl'>
-						CHOOSE
+				<div className='mt-5  rounded-3xl'>
+					<h1 className='pt-5 mb-5 text-center font-josef text-3xl m-0 pt-0 lg:text-2xl'>
+						Active lotteries
 					</h1>
-					<p>
 						<div className='mt-10 flex flex-wrap'>
 							{lotteries ? (lotteries.map((item, index) => {
 								if (item.activeLottery) {
@@ -62,7 +61,6 @@ const BuyTicket = () => {
 								}
 							})) : (<p className="text-white text-center">Loading ...</p>)}
 						</div>
-					</p>
 				</div>
 			</div>
 		</>
