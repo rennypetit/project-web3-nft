@@ -9,60 +9,21 @@ const BuyTicket = () => {
 
     const services = new Services(); // instance
     const lottery = useLottery();
-    const nft = useNFT();
-    const { active, account } = useWeb3React();
-    const [data, setData] = useState(null);
-    const [activeLotteries, setActiveLotteries] = useState([]);
-    const [lottoToBuy, setLottoToBuy] = useState();
-    const [lotteryCount, setLotteryCount] = useState();
+    const [lotteries, setLotteries] = useState<any>();
 
     const getData = useCallback(async () => {
-        if (lottery && nft) {
-            const count = await services.methodGetLotteryCount(lottery);
-            setLotteryCount(count)
-            if (count > 0) {
-                setActiveLotteries([])
-                for (let i = 0; i < count; i++) {
-                    let idx = i
-                    let response = await services.methodGetLottery(lottery, idx);
-                    if (response) {
-                        const nftOwner = response[0]
-                        const nftContractAddress = response[1]
-                        const bettingPrice = response[2]
-                        const activeLottery = response[3]
-                        const players = response[4]
-                        const lotteryBalance = response[5]
-                        const lotteryWinner = response[6]
-                        const endDate = response[7]
-                        const newLotto = { nftOwner, nftContractAddress, bettingPrice, activeLottery, players, lotteryBalance, lotteryWinner, endDate }
-                        // setActiveLotteries([...activeLotteries, newLotto])
-                        activeLotteries = [...activeLotteries, newLotto]
-                    }
-                    console.log(response);
-                }
-                setActiveLotteries(activeLotteries)
-            }
+        if (lottery) {
+            console.log("yes")
+            const lottosToSet = await services.methodGetLotteries(lottery);
+            setLotteries(lottosToSet);
+            console.log(lotteries)
         }
-    }, [activeLotteries, lottery, nft, services]);
+    }, [lottery, services])
 
     useEffect(() => {
         getData();
     }, []);
 
-
-
-    /* five */
-    const { register, handleSubmit } = useForm<IFormInput>();
-    const onSubmit: SubmitHandler<IFormInput> = async (data) => {
-        const response = await services.methodBuyTicket(lottery, account, data);
-        console.log(response);
-    };
-    /* end five */
-
-    const handleSelect = (event) => {
-        event.preventDefault();
-        setLottoToBuy(0)
-    }
 
     return (
         <>
@@ -73,20 +34,19 @@ const BuyTicket = () => {
                 Buy ticket
             </h1>
             <div >
-                <div className='mt-10 flex flex-wrap bg-gradient-to-r from-indigo-500/40 via-purple-500/40 to-pink-500/40 rounded-3xl'>
-                    <h1 className='mb-5 text-center font-josef text-1xl m-0 pt-0 lg:text-2xl'>
-                        CHOOSE
+                <div className='mt-5 bg-gradient-to-r from-indigo-500/40 via-purple-500/40 to-pink-500/40 rounded-3xl'>
+                    <h1 className='mb-5 pt-5 text-center font-josef text-1xl m-0 pt-0 lg:text-2xl'>
+                        Active Lotteries
                     </h1>
-                    <p>
-                        <div className='mt-10 flex flex-wrap'>
-                            {activeLotteries.map((item, index) => {
-                                if (item.activeLottery) {
-                                    return <LotteryCard key={index} lotto={item} />
-                                }
+                    <div className='mt-10 flex flex-wrap'>
+                        {lotteries ? lotteries.map((item, index) => {
+                            if (item.activeLottery) {
+                                return <LotteryCard key={index} lotto={item} />
+                            }
 
-                            })}
-                        </div>
-                    </p>
+                        }) : <p className='text-center text-white'>Loading ...</p>}
+                    </div>
+
                 </div>
             </div>
         </>
