@@ -48,11 +48,16 @@ const Lottery: NextPage = () => {
 					</div>
 				</div>
 				{!active ? (
-					<div className="text-center py-4 lg:px-4">
-					<div className="p-2 bg-orange-100 items-center border-orange-500 text-orange-500 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
-					  <span className="font-semibold mr-2 text-left flex-auto">First connect your wallet</span>
+					<div className='text-center py-4 lg:px-4'>
+						<div
+							className='p-2 bg-orange-100 items-center border-orange-500 text-orange-500 leading-none lg:rounded-full flex lg:inline-flex'
+							role='alert'
+						>
+							<span className='font-semibold mr-2 text-left flex-auto'>
+								First connect your wallet
+							</span>
+						</div>
 					</div>
-				  </div>
 				) : (
 					<>
 						<CreateLottery />

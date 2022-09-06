@@ -1,10 +1,10 @@
 const PostBuyTicket = async (lottery, account, data) => {
-	const { buy, lotteryId } = data;
-
+	const { buyTicket, _lotteryId } = data;
 	return await lottery.methods
-		.buyTicket(Number(lotteryId))
+		.buyTicket(_lotteryId)
 		.send({
 			from: account,
+			value: Number(buyTicket),
 		})
 		.on('transactionHash', (txHash) => {
 			alert('Transacción buy lottery enviada');

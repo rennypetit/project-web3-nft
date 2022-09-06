@@ -15,43 +15,17 @@ const startLottery = () => {
 	const lottery = useLottery();
 	const { active, account } = useWeb3React();
 
-	/* five */
-	const { register, handleSubmit } = useForm<IFormInput>();
-	const onSubmit: SubmitHandler<IFormInput> = async (data) => {
-		const response = await services.methodBuyTicket(lottery, account, data);
-		console.log(response);
+	const handleBuy = (buyTicket, _lotteryId) => {
+		const data = {
+			buyTicket,
+			_lotteryId,
+		};
+		services.methodBuyTicket(lottery, account, data);
 	};
-	/* end five */
 
 	return (
 		<div className='text-white'>
-			<p>5: /buy tikect</p>
-			<form onSubmit={handleSubmit(onSubmit)}>
-				<label>buy</label>
-				<input
-					className='text-black'
-					{...register('buy', {
-						required: true,
-					})}
-					required
-					type='number'
-				/>{' '}
-				<br />
-				<br />
-				<label>lotteryId</label>
-				<input
-					className='text-black'
-					required
-					type='number'
-					{...register('lotteryId', {
-						required: true,
-					})}
-				/>{' '}
-				<br />
-				<br />
-				<input type='submit' />
-			</form>
-			{/* {modal && <Modal setModal={setModal} />} */}
+			<button onClick={() => handleBuy('10000000000000000', '1')}>buy</button>
 		</div>
 	);
 };
