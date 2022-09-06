@@ -56,11 +56,11 @@ const BuyTicket = () => {
 					</h1>
 					<p>
 						<div className='mt-10 flex flex-wrap'>
-							{lotteries.map((item, index) => {
+							{lotteries ? (lotteries.map((item, index) => {
 								if (item.activeLottery) {
 									return <LotteryCard key={index} lotto={item} />;
 								}
-							})}
+							})) : (<p className="text-white text-center">Loading ...</p>)}
 						</div>
 					</p>
 				</div>
