@@ -1,6 +1,6 @@
 const newLotteryArtifact = {
 	address: {
-		5: '0x8ece7df68c4d9b0a94fba10b8599371a06a22b7c',
+		5: '0xEDcF7b2B1aF812FF9Af468FC4A3324647423CE14',
 	},
 	abi: [
 		{
@@ -208,15 +208,35 @@ const newLotteryArtifact = {
 			],
 			name: 'getLottery',
 			outputs: [
-				{ internalType: 'address', name: '', type: 'address' },
-				{ internalType: 'address', name: '', type: 'address' },
-				{ internalType: 'uint256', name: '', type: 'uint256' },
-				{ internalType: 'bool', name: '', type: 'bool' },
-				{ internalType: 'address[]', name: '', type: 'address[]' },
-				{ internalType: 'uint256', name: '', type: 'uint256' },
-				{ internalType: 'address', name: '', type: 'address' },
-				{ internalType: 'uint256', name: '', type: 'uint256' },
-				{ internalType: 'address', name: '', type: 'address' },
+				{
+					components: [
+						{ internalType: 'address', name: 'nftOwner', type: 'address' },
+						{
+							internalType: 'address',
+							name: 'nftContractAddress',
+							type: 'address',
+						},
+						{ internalType: 'uint256', name: 'bettingPrice', type: 'uint256' },
+						{ internalType: 'bool', name: 'activeLottery', type: 'bool' },
+						{ internalType: 'address[]', name: 'players', type: 'address[]' },
+						{
+							internalType: 'uint256',
+							name: 'lotteryBalance',
+							type: 'uint256',
+						},
+						{
+							internalType: 'address',
+							name: 'beneficiaryAddress',
+							type: 'address',
+						},
+						{ internalType: 'address', name: 'lotteryWinner', type: 'address' },
+						{ internalType: 'uint256', name: 'endDate', type: 'uint256' },
+						{ internalType: 'uint256', name: 'nftTokenId', type: 'uint256' },
+					],
+					internalType: 'struct Lottery.singleLottery',
+					name: '',
+					type: 'tuple',
+				},
 			],
 			stateMutability: 'view',
 			type: 'function',
@@ -318,4 +338,4 @@ const newLotteryArtifact = {
 	],
 };
 
-export default newLotteryArtifact
+export default newLotteryArtifact;

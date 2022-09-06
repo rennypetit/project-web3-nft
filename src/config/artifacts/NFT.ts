@@ -1,6 +1,6 @@
 const NFTArtifact = {
 	address: {
-		5: '0xBdB5607C8b0D48abB39e9098099D5CF6bAe50322',
+		5: '0x2a2B44eafEB51276aFaBe1F9FAc2f7bbF3e443B1',
 	},
 	abi: [
 		{ inputs: [], stateMutability: 'nonpayable', type: 'constructor' },
