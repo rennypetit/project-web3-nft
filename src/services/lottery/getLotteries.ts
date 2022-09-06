@@ -11,9 +11,10 @@ const getLotteries = async (lottery: any) => {
 		const activeLottery = response[3];
 		const players = response[4];
 		const lotteryBalance = response[5];
-		const lotteryWinner = response[6];
-		const endDate = response[7];
-        const beneficiaryAddress = response[8];
+        const beneficiaryAddress = response[6];
+		const lotteryWinner = response[7];
+		const endDate = response[8];
+		const nftTokenId = response[9]
 		const newLotto = {
 			id,
 			nftOwner,
@@ -24,9 +25,11 @@ const getLotteries = async (lottery: any) => {
 			lotteryBalance,
 			lotteryWinner,
 			endDate,
-            beneficiaryAddress
+            beneficiaryAddress,
+			nftTokenId
 		};
 		res.push(newLotto);
+		console.log(response)
         // res.push(response)
 	}
 	return await Promise.all(res);

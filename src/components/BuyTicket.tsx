@@ -15,6 +15,11 @@ const BuyTicket = () => {
 	const [lottoToBuy, setLottoToBuy] = useState();
 	const [lotteries, setLotteries] = useState<any>();
 
+	const update = async () => {
+		const lottosToSet = await services.methodGetLotteries(lottery);
+		setLotteries(lottosToSet);
+	}
+
 	const getData = useCallback(async () => {
 		if (lottery) {
 			console.log("yes")
@@ -57,7 +62,7 @@ const BuyTicket = () => {
 						<div className='mt-10 flex flex-wrap'>
 							{lotteries ? (lotteries.map((item, index) => {
 								if (item.activeLottery) {
-									return <LotteryCard key={index} lotto={item} />;
+									return <LotteryCard key={index} lotto={item} update={update}/>;
 								}
 							})) : (<p className="text-white text-center">Loading ...</p>)}
 						</div>
