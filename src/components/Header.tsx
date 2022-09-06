@@ -2,18 +2,18 @@ import { Fragment } from 'react';
 import Link from 'next/link';
 import { Popover, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import Button from './Button';
+import ContainerButton from './web3/ContainerButtons';
+import Image
+ from 'next/image';
 const Header = () => {
 	return (
 		<header>
-			<Popover className='relative'>
+			<Popover className='relative z-10'>
 				<div className='w-11/12 mx-auto px-0'>
 					<div className='flex justify-between items-center border-gray-100 py-6 md:justify-start md:space-x-10'>
 						<div className='flex justify-start lg:w-0 lg:flex-1'>
 							<Link href='/'>
-								<a className='text-white font-almendra'>
-									POKEMONGAME<span className='font-bold'>.card</span>
-								</a>
+								<Image src="/images/logo-nft.png" className='object-scale-down z-10 w-96 sm:w-56 xxs:w-32' alt="Logo"  width={200} height={96} />
 							</Link>
 						</div>
 						<div className='-mr-2 -my-2 md:hidden'>
@@ -29,8 +29,8 @@ const Header = () => {
 							<Link href='/lottery'>
 								<a className='text-base text-white'>Lottery</a>
 							</Link>
-							<Link href='/collection'>
-								<a className='text-base text-white'>Collection</a>
+							<Link href='/winners'>
+								<a className='text-base text-white'>Winners</a>
 							</Link>
 							<Link href='/admin'>
 								<a className='text-base text-white'>Admin</a>
@@ -40,7 +40,7 @@ const Header = () => {
 							</Link>
 						</Popover.Group>
 						<div className='hidden md:flex items-center justify-end md:flex-1 lg:w-0'>
-							<Button text='Wallet' />
+							<ContainerButton />
 						</div>
 					</div>
 				</div>
@@ -97,7 +97,7 @@ const Header = () => {
 									</Link>
 								</div>
 								<div className='text-center m-0'>
-									<Button text='Wallet' />
+									<ContainerButton />
 								</div>
 							</div>
 						</div>

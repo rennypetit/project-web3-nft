@@ -1,5 +1,4 @@
 import Header from '../components/Header';
-import Footer from '../components/Footer';
 
 const Layout = ({ children }) => {
 	return (
@@ -8,7 +7,6 @@ const Layout = ({ children }) => {
 			<div className='Layout flex min-h-screen flex-wrap w-full'>
 				{children}
 			</div>
-			<Footer />
 		</>
 	);
 };
