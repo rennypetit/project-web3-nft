@@ -2,10 +2,15 @@ import { useWeb3React } from '@web3-react/core';
 import React, { useEffect } from 'react';
 import Image from 'next/image';
 import truncated from 'utils/truncateAddress';
+import Services from '@services/index';
+import { useLottery } from 'hooks';
 
 const LotteryCard = (props: any) => {
 	// const newLotto = { nftOwner, nftContractAddress, bettingPrice, activeLottery, players, lotteryBalance, lotteryWinner, endDate }
-	const { library } = useWeb3React();
+	const { library, account } = useWeb3React();
+	const services = new Services(); // instance
+	const lottery = useLottery();
+	
 	let bettingPrice = library.utils.fromWei(
 		props.lotto.bettingPrice.toString(),
 		'ether'
@@ -21,6 +26,17 @@ const LotteryCard = (props: any) => {
 
 	const handleSelect = (event: any) => {
 		event.preventDefault();
+	};
+
+	const handleBuy = () => {
+		let buyTicket = props.lotto.bettingPrice
+		let _lotteryId = props.lotto.id
+		console.log(">id",props.lotto)
+		// const data = {
+		// 	buyTicket,
+		// 	_lotteryId,
+		// };
+		// services.methodBuyTicket(lottery, account, data);
 	};
 
 	return (
@@ -50,7 +66,9 @@ const LotteryCard = (props: any) => {
 				<p>End date: {dateString}</p>
 				<p>Beneficiary {truncated(props.lotto.beneficiaryAddress)}</p>
 				{props.lotto.activeLottery ? (
-					<button className='relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800'>
+					<button 
+						onClick={handleBuy}
+						className='relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800'>
 						<span className='relative px-5 py-2.5 transition-all font-bold ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'>
 							Buy ticket
 						</span>

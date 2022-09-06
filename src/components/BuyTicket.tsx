@@ -13,45 +13,16 @@ const BuyTicket = () => {
 	const [data, setData] = useState(null);
 	const [activeLotteries, setActiveLotteries] = useState([]);
 	const [lottoToBuy, setLottoToBuy] = useState();
-	const [lotteryCount, setLotteryCount] = useState();
+	const [lotteries, setLotteries] = useState<any>();
 
 	const getData = useCallback(async () => {
-		if (lottery && nft) {
-			const count = await services.methodGetLotteryCount(lottery);
-			setLotteryCount(count);
-			if (count > 0) {
-				setActiveLotteries([]);
-				for (let i = 0; i < count; i++) {
-					let idx = i;
-					let response = await services.methodGetLottery(lottery, idx);
-					if (response) {
-						const nftOwner = response[0];
-						const nftContractAddress = response[1];
-						const bettingPrice = response[2];
-						const activeLottery = response[3];
-						const players = response[4];
-						const lotteryBalance = response[5];
-						const lotteryWinner = response[6];
-						const endDate = response[7];
-						const newLotto = {
-							nftOwner,
-							nftContractAddress,
-							bettingPrice,
-							activeLottery,
-							players,
-							lotteryBalance,
-							lotteryWinner,
-							endDate,
-						};
-						// setActiveLotteries([...activeLotteries, newLotto])
-						activeLotteries = [...activeLotteries, newLotto];
-					}
-					console.log(response);
-				}
-				setActiveLotteries(activeLotteries);
-			}
+		if (lottery) {
+			console.log("yes")
+			const lottosToSet = await services.methodGetLotteries(lottery);
+			setLotteries(lottosToSet);
+			console.log(lotteries)
 		}
-	}, [activeLotteries, lottery, nft, services]);
+	}, [lotteries, lottery, services])
 
 	useEffect(() => {
 		getData();
@@ -85,7 +56,7 @@ const BuyTicket = () => {
 					</h1>
 					<p>
 						<div className='mt-10 flex flex-wrap'>
-							{activeLotteries.map((item, index) => {
+							{lotteries.map((item, index) => {
 								if (item.activeLottery) {
 									return <LotteryCard key={index} lotto={item} />;
 								}

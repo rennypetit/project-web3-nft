@@ -3,6 +3,7 @@ const getLotteries = async (lottery: any) => {
 	const count = await lottery.methods.getLotteryCount().call();
 	let res = [];
 	for (let i = 0; i < count; i++) {
+		let id = i;
 		let response = await lottery.methods.getLottery(i).call();
 		const nftOwner = response[0];
 		const nftContractAddress = response[1];
@@ -14,6 +15,7 @@ const getLotteries = async (lottery: any) => {
 		const endDate = response[7];
         const beneficiaryAddress = response[8];
 		const newLotto = {
+			id,
 			nftOwner,
 			nftContractAddress,
 			bettingPrice,
