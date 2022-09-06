@@ -2,7 +2,7 @@ import React from 'react';
 
 const Information = () => {
 	return (
-		<table className='border-collapse border border-slate-400 m-auto w-full'>
+		<table className='table-auto border-collapse border border-slate-400 m-auto w-full'>
 			<thead>
 				<tr>
 					<th className='border border-slate-300 text-yellow-500'>Altura</th>

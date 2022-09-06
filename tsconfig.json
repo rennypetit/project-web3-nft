@@ -1,27 +1,5 @@
 {
-  
   "compilerOptions": {
-    "baseUrl": "./src",
-    "paths": {
-      "@web3/*": [
-        "web3/*"
-      ],
-      "@components/*": [
-        "components/*"
-      ],
-      "@contexts/*": [
-        "contexts/*"
-      ],
-      "@types/*": [
-        "types/*"
-      ],
-      "@config/*": [
-        "config/*"
-      ],
-      "@services/*": [
-        "services/*"
-      ],
-    },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
