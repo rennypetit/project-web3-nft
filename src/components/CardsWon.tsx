@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import truncated from 'utils/truncateAddress';
+
 
 const CardsWon = (props: any) => {
 	return (
@@ -11,10 +13,10 @@ const CardsWon = (props: any) => {
 					height='291'
 					layout='responsive'
 				/>
-				<p className='text-white text-center pt-4 font-poppins font-medium'>{props.name}</p>
-				<p className='text-white'>Price: {props.price} ETH</p>
-                <p className='text-white'>Participants: {props.ParNum}</p>
-				<p className='text-white'>Winner: {props.WinName}</p>
+				<p className='text-white text-center pt-4 font-poppins font-medium'>Winner</p>
+				<p className='text-white text-center pt-4 font-poppins font-medium pb-3'>{truncated(props.name)}</p>
+				<p className='text-white'>Beneficiary: {truncated(props.beneficiary)}</p>
+				<p className='text-white'>Nft Contract: {truncated(props.nftContract)}</p>
 			</div>
 		</>
 	);

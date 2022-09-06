@@ -1,9 +1,9 @@
 import { useWeb3React } from '@web3-react/core';
 import React, { useEffect } from 'react';
 import Image from 'next/image';
+import truncated from 'utils/truncateAddress';
 
 const LotteryCard = (props: any) => {
-	console.log(props);
 	// const newLotto = { nftOwner, nftContractAddress, bettingPrice, activeLottery, players, lotteryBalance, lotteryWinner, endDate }
 	const { library } = useWeb3React();
 	let bettingPrice = library.utils.fromWei(
@@ -35,8 +35,8 @@ const LotteryCard = (props: any) => {
 						Inactive
 					</div>
 				)}
-				<p>Owner: {props.lotto.nftOwner}</p>
-				<p>Nft contract: {props.lotto.nftContractAddress}</p>
+				<p>Owner: {truncated(props.lotto.nftOwner)}</p>
+				<p>Nft contract: {truncated(props.lotto.nftContractAddress)}</p>
 				<p>Betting price: {bettingPrice} eth</p>
 				<p>Is active: {props.lotto.activeLottery ? 'true' : 'false'}</p>
 				<p>Players: {props.lotto.players.length}</p>
@@ -48,6 +48,7 @@ const LotteryCard = (props: any) => {
 					<p>Winner: {props.lotto.lotteryWinner}</p>
 				)}
 				<p>End date: {dateString}</p>
+				<p>Beneficiary {truncated(props.lotto.beneficiaryAddress)}</p>
 				{props.lotto.activeLottery ? (
 					<button className='relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800'>
 						<span className='relative px-5 py-2.5 transition-all font-bold ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'>
