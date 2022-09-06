@@ -18,17 +18,17 @@ const methods = () => {
 	const [data, setData] = useState(null);
 	// const [modal, setModal] = useState(false);
 
-	/* one */
-	const getData = useCallback(async () => {
-		if (lottery && nft) {
-			const response = await services.methodGetLottery(lottery, 0);
-			console.log(response);
-		}
-	}, [nft, lottery, account]);
+	// /* one */
+	// const getData = useCallback(async () => {
+	// 	if (lottery && nft) {
+	// 		const response = await services.methodGetLottery(lottery, 0);
+	// 		console.log(response);
+	// 	}
+	// }, [nft, lottery, account]);
 
-	useEffect(() => {
-		getData();
-	}, [getData]);
+	// useEffect(() => {
+	// 	getData();
+	// }, [getData]);
 
 	/* end one */
 
