@@ -12,7 +12,7 @@ const Header = () => {
 				<div className='w-11/12 mx-auto px-0'>
 					<div className='flex justify-between items-center border-gray-100 py-6 md:justify-start md:space-x-10'>
 						<div className='flex justify-start lg:w-0 lg:flex-1'>
-							<h1 className='etext-white z-10 font-bold text-xl'>
+							<h1 className='text-white z-10 font-bold text-xl'>
 							Philanthropy
 							</h1>
 						</div>
