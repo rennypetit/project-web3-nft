@@ -8,7 +8,7 @@ import Image
 const Header = () => {
 	return (
 		<header>
-			<Popover className='relative z-10'>
+			<Popover className='relative z-30'>
 				<div className='w-11/12 mx-auto px-0'>
 					<div className='flex justify-between items-center border-gray-100 py-6 md:justify-start md:space-x-10'>
 						<div className='flex justify-start lg:w-0 lg:flex-1'>
