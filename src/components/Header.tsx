@@ -7,12 +7,12 @@ const Header = () => {
 	return (
 		<header>
 			<Popover className='relative Z-30'>
-				<div className='w-11/12 mx-auto px-0'>
+				<div className='w-11/12 mx-auto pr-40'>
 					<div className='flex justify-between items-center border-gray-100 py-6 md:justify-start md:space-x-10 z-20'>
-						<div className='flex justify-start lg:w-0 lg:flex-1'>
-							<Link href='/'>
-								<img src="/images/logo-nft.png" className='object-scale-down z-10 w-96 sm:w-56 xxs:w-32' alt="Logo" />
-							</Link>
+						<div className='flex  justify-center lg:w-0 lg:flex-1'>
+							<h1 className='text-base text-white z-30'>
+							Philanthropy
+							</h1>
 						</div>
 						<div className='-mr-2 -my-2 md:hidden z-10'>
 							<Popover.Button className='bg-transparent border border-yellow-500 shadow-sm text-base rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 z-30'>
@@ -92,7 +92,7 @@ const Header = () => {
 										</a>
 									</Link>
 								</div>
-								<div className='text-center m-0'>
+								<div className='text-center m-0 pr-2'>
 									<Button text='Wallet' />
 								</div>
 							</div>
