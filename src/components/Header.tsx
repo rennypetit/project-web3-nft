@@ -12,9 +12,11 @@ const Header = () => {
 				<div className='w-11/12 mx-auto px-0'>
 					<div className='flex justify-between items-center border-gray-100 py-6 md:justify-start md:space-x-10'>
 						<div className='flex justify-start lg:w-0 lg:flex-1'>
-							<h1 className='text-white z-10 font-bold text-xl'>
-							Philanthropy
-							</h1>
+							<Link href='/' >
+								<h1 className='text-white z-10 font-bold text-xl cursor-pointer'>
+								Philanthropy
+								</h1>
+							</Link>
 						</div>
 						<div className='-mr-2 -my-2 md:hidden'>
 							<Popover.Button className='bg-transparent border border-yellow-500 rounded-md shadow-sm text-base rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500'>
