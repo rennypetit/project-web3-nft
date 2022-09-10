@@ -10,8 +10,8 @@ const Lottery: NextPage = () => {
 
 	return (
 		<>
-			<div className='w-11/12  text-white p-0 m-auto'>
-				<h1 className='text-2xl font-josef font-bold leading-1 md:text-8xl xxs:text-5xl mb-10'>PLAY NOW!</h1>
+			<div className='lg:w-3/4 mx-auto  text-white p-0 '>
+				<h1 className='text-2xl text-white text-center font-josef font-bold leading-1 md:text-6xl xxs:text-5xl mb-10'>PLAY NOW!</h1>
 
 
 				{!active ? (

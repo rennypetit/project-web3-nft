@@ -5,7 +5,7 @@ const ContentLeft = () => {
 	return (
 		<div className='z-10'>
 			<h1 className='text-2xl text-white text-center pt-20 font-josef font-bold leading-1 md:text-6xl xxs:text-5xl mb-10'>
-			NFT Giveaways  for The Good Cause <br />
+			NFT Lotteries for The Good Cause <br />
 			</h1>
 
 			<div className=' rounded-3xl p-4 2xl:w-1/2 xl:w-1/2 lg:w-1/2 md:w-3/5 sm:w-3/5 xxs:w-3/4 mx-auto '>

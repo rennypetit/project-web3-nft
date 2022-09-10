@@ -7,7 +7,7 @@ const Team: NextPage = () => {
 	return (
         <>
 		<div className='w-11/12  text-white p-0 m-auto'>
-            <h1 className='text-whitetext-2xl text-center font-poppins font-medium leading-1 sm:text-4xl md:text-left xl:text-5xl'>
+            <h1 className='text-2xl text-white text-center font-josef font-bold leading-1 md:text-6xl xxs:text-5xl mb-10'>
 				Development 
 				<span className='text-yellow-500'> Team</span> <br /> <br />
 			</h1>
