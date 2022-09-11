@@ -7,13 +7,15 @@ import Image
  from 'next/image';
 const Header = () => {
 	return (
-		<header>
-			<Popover className='relative z-10'>
+		<header className='lg:w-3/4 mx-auto'>
+			<Popover className='relative z-30'>
 				<div className='w-11/12 mx-auto px-0'>
 					<div className='flex justify-between items-center border-gray-100 py-6 md:justify-start md:space-x-10'>
 						<div className='flex justify-start lg:w-0 lg:flex-1'>
-							<Link href='/'>
-								<Image src="/images/logo-nft.png" className='object-scale-down z-10 w-96 sm:w-56 xxs:w-32' alt="Logo"  width={200} height={96} />
+							<Link href='/' >
+								<h1 className='text-white z-10 font-bold text-xl cursor-pointer'>
+								Philanthropy
+								</h1>
 							</Link>
 						</div>
 						<div className='-mr-2 -my-2 md:hidden'>
@@ -58,13 +60,13 @@ const Header = () => {
 						focus
 						className='absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden'
 					>
-						<div className='rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50'>
+						<div className='rounded-lg shadow-lg  bg-white divide-y-2 divide-gray-50'>
 							<div className='py-0 pb-6 px-5 pb-0'>
 								<div className='flex items-center justify-between'>
 									<div>
 										<Link href='/'>
-											<a className='text-white font-almendra'>
-												POKEMONGAME<span className='font-bold'>.card</span>
+											<a className='text-black font-almendra'>
+												Philanthropy
 											</a>
 										</Link>
 									</div>

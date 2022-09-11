@@ -51,7 +51,7 @@ const BuyTicket = () => {
 			<h2 className='font-josef text-1xl m-0 pt-0 lg:text-2xl text-orange-500'>
 				Want to play?
 			</h2>
-			<h1 className='text-2xl font-josef font-bold leading-1 md:text-8xl xxs:text-5xl'>
+			<h1 className='font-josef font-bold text-1xl lg:text-2xl'>
 				Buy ticket
 			</h1>
 			<div>

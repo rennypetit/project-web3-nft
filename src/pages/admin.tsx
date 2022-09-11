@@ -1,7 +1,7 @@
 const admin = () => {
 	return (
         <div className='w-11/12  text-white p-0 m-auto'>
-            <h1 className='text-center text-white text-2xl font-josef font-bold leading-1 md:text-8xl xxs:text-5xl'>
+            <h1 className='text-2xl text-white text-center font-josef font-bold leading-1 md:text-6xl xxs:text-5xl mb-10'>
                 Admin section 
             </h1>
             <div className='grid text-white place-content-center mt-10'>
