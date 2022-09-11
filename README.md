@@ -1,10 +1,6 @@
-# NFT Giveaways for The Good Cause
+# Philanthropy
 
-**PHILANTHROPY:** PLATAFORMA QUE CANALICE LA SOLIDARIDAD DE COMPAÑIAS, ENTIDADES PÚBLICAS O ARTISTAS A TRAVÉS DE SORTEO DE NFTS CREADOS PARA TAL FIN.
-
-LOS DESTINATARIOS SON ONGs, ENTIDADES BENÉFICAS, DE AYUDA A PAISES EN DESARROLLO O LUCHA CONTRA EL CAMBIO CLIMÁTICO REGISTRADAS EN LA PLATAFORMA.
-
-GANACIAS DE CADA SORTEO DIRECTAMENTE A SUS CUENTAS EN LAS BLOCKCHAIN, 100% TRANSPARENCIA.
+**PHILANTHROPY:** Philanthropy, is the platform of NFTs created for charitable purposes and offered, in a disinterested way, to raffle. The benefits will go to the charities directly, without intermediaries, thanks to Blockchain Technology. 100% Transparency.
 
 **Authors:** Aitor Zaldua, Santiago Somoza, Renny Petit, Anas Bouhanassa,Andrés Díaz
 
