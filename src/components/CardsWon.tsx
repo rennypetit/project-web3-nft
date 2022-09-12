@@ -42,7 +42,7 @@ const CardsWon = (props: any) => {
 						alt='nft'
 						width={200}
 						height={200}
-					/>) : ("")}
+					/>) : ("Loading image...")}
 				<p className='text-white text-center pt-4 font-poppins font-medium'>Winner</p>
 				<p className='text-white text-center pt-4 font-poppins font-medium pb-3'>{truncated(props.name)}</p>
 				<p className='text-white'>Beneficiary: {truncated(props.beneficiary)}</p>

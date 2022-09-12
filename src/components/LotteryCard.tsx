@@ -89,7 +89,7 @@ const LotteryCard = (props: any) => {
 					alt='nft'
 					width={200}
 					height={200}
-				/>) : ("")}
+				/>) : ("Loading image...")}
 				<p>Betting price: {bettingPrice} eth</p>
 				<p>Players: {props.lotto.players.length}</p>
 				<p>Balance: {lotteryBalance} eth</p>
