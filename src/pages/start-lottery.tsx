@@ -41,7 +41,7 @@ const startLottery = () => {
 				<form onSubmit={handleSubmit(onSubmit)} className=' w-full max-w-lg bg-gradient-to-r from-indigo-500/40 via-purple-500/40 to-pink-500/40 rounded px-8 pt-6 pb-8 mb-4'>
 					<label className="block text-white text-sm font-bold mb-2" >Id of your NFT</label>
 					<input
-						className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+						className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-white leading-tight focus:outline-none focus:shadow-outline"
 						{...register('tokenId', {
 							required: true,
 							minLength: 0,
@@ -53,7 +53,7 @@ const startLottery = () => {
 					<br />
 					<label className="block text-white text-sm font-bold mb-2">Contract Address of your NFT</label>
 					<input
-						className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+						className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-white leading-tight focus:outline-none focus:shadow-outline"
 						{...register('nftContractAddress', {
 							required: true,
 							minLength: 40,
@@ -67,7 +67,7 @@ const startLottery = () => {
 					<br />
 					<label className="block text-white text-sm font-bold mb-2">Betting Price</label>
 					<input
-						className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+						className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-white leading-tight focus:outline-none focus:shadow-outline"
 						required
 						type='number'
 						{...register('bettingPrice', {
@@ -78,7 +78,7 @@ const startLottery = () => {
 					<br />
 					<label className="block text-white text-sm font-bold mb-2">Wallet Address of the beneficiary</label>
 					<input
-						className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+						className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-white leading-tight focus:outline-none focus:shadow-outline"
 						{...register('beneficiaryAddress', {
 							required: true,
 							minLength: 40,
@@ -92,7 +92,7 @@ const startLottery = () => {
 					<br />
 					<label className="block text-white text-sm font-bold mb-2">Hours to finish</label>
 					<input
-						className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+						className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-white leading-tight focus:outline-none focus:shadow-outline"
 						required
 						min={24}
 						max={720}
@@ -107,7 +107,7 @@ const startLottery = () => {
 					<br />
 					<label className="block text-white text-sm font-bold mb-2">Minutes to finish</label>
 					<input
-						className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+						className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight dark:text-white focus:outline-none focus:shadow-outline"
 						required
 						min={5}
 						max={60}
