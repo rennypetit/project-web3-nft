@@ -1,7 +1,8 @@
 const PostApprove = async (nft, account, data) => {
-	const { address, tokenId } = data;
+	const { to, tokenId } = data;
+	console.log(to, tokenId)
 	return await nft.methods
-		.approve(address, tokenId)
+		.approve(to, tokenId)
 		.send({
 			from: account,
 		})

@@ -7,6 +7,7 @@ import {
 	getLotteries,
 } from './lottery';
 import { PostApprove, PostSafeMint, GetMetaData } from './nft';
+import GetApproved from './nft/GetApproved';
 
 class Services {
 	async methodGetLotteries(lottery: any) {
@@ -19,6 +20,10 @@ class Services {
 
 	async methodGetLottery(lottery, i) {
 		return await GetLottery(lottery, i);
+	}
+
+	async methodGetApproved(nft, id){
+		return await GetApproved(nft, id);
 	}
 
 	async methodPostSafeMint(nft, account) {
