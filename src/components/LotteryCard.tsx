@@ -10,7 +10,7 @@ const LotteryCard = (props: any) => {
 	const { library, account } = useWeb3React();
 	const services = new Services(); // instance
 	const lottery = useLottery();
-	const nft = useNFT();
+	const nft = useNFT(props.lotto.nftContractAddress);
 	const [data, setData] = useState(false);
 	const [img, setImg] = useState();
 	const update = props.update
@@ -65,7 +65,7 @@ const LotteryCard = (props: any) => {
 				console.log(dataNFT);
 				setData(dataNFT);
 			};
-			MetaData();
+			MetaData(props.lotto.nftTokenId);
 		}
 	}, [nft]);
 
