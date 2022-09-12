@@ -12,9 +12,8 @@ const Lottery: NextPage = () => {
 		<>
 			<div className='lg:w-3/4 mx-auto  text-white p-0 '>
 				<h1 className='text-2xl text-white text-center font-josef font-bold leading-1 md:text-6xl xxs:text-5xl mb-10'>Play now!</h1>
-				<BuyTicket />
 
-				{/* {!active ? (
+				{!active ? (
 					<div className='text-center py-4 lg:px-4'>
 						<div
 							className='p-2 bg-orange-100 items-center border-orange-500 text-orange-500 leading-none lg:rounded-full flex lg:inline-flex'
@@ -27,10 +26,9 @@ const Lottery: NextPage = () => {
 					</div>
 				) : (
 					<>
-						<CreateLottery />
 						<BuyTicket />
 					</>
-				)} */}
+				)}
 			</div>
 			<img src='/images/map.png' className='w-full' alt='' />
 		</>
