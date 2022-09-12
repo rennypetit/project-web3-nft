@@ -34,8 +34,8 @@ const Header = () => {
 							<Link href='/winners'>
 								<a className='text-base text-white'>Winners</a>
 							</Link>
-							<Link href='/admin'>
-								<a className='text-base text-white'>Admin</a>
+							<Link href='/start-lottery'>
+								<a className='text-base text-white'>Create</a>
 							</Link>
 							<Link href='/team'>
 								<a className='text-base text-white'>Team</a>
