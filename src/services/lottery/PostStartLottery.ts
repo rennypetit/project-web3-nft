@@ -11,7 +11,7 @@ const PostStartLottery = async (lottery, account, data) => {
 		.startLottery(
 			Number(tokenId),
 			nftContractAddress,
-			Number(bettingPrice),
+			bettingPrice,
 			beneficiaryAddress,
 			Number(endDate)
 		)
