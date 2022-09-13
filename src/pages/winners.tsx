@@ -53,7 +53,7 @@ const Winners: NextPage = () => {
 							}
 						})
 					) : (
-						<p className="text-center text-white">Loading ...</p>
+						<p className="text-center text-white">Loading...</p>
 					)}
 				</div>
 			</div>
