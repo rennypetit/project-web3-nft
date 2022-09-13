@@ -2,7 +2,7 @@
     "team": [
         {
             "name": "Aitor Zaldua",
-            "role": "Developer",
+            "role": "Smart Contract Developer",
             "social": {
                 "linkedin": "aitor-zaldua",
                 "twitter": "azdraft_",
@@ -13,7 +13,7 @@
         },
         {
             "name": "Santiago Somoza",
-            "role": "Smartcontracts Developer",
+            "role": "Smart Contract Developer",
             "social": {
                 "linkedin": "santiago-somoza-005660197",
                 "twitter": "santito1234567",
@@ -24,7 +24,7 @@
         },
         {
             "name": "Renny Petit",
-            "role": "Developer",
+            "role": "Blockchain Fullstack Dev.",
             "social": {
                 "linkedin": "",
                 "twitter": "",
@@ -35,7 +35,7 @@
         },
         {
             "name": "Anas Bouhanassa",
-            "role": "Developer",
+            "role": "UI Developer",
             "social": {
                 "linkedin": "",
                 "twitter": "",
@@ -46,7 +46,7 @@
         },
         {
             "name": "Andrés Díaz",
-            "role": "Developer",
+            "role": "Blockchain Fullstack Dev.",
             "social": {
                 "linkedin": "andiazo",
                 "twitter": "__andiazo__",
