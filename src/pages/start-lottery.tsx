@@ -169,14 +169,14 @@ const startLottery = () => {
 									<input
 										className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-white leading-tight focus:outline-none focus:shadow-outline"
 										required
-										min={1}
-										max={720}
+										min={0}
+										max={8760}
 										defaultValue={1}
 										type="number"
 										{...register("hours", {
 											required: true,
-											min: 1,
-											max: 720,
+											min: 0,
+											max: 8760,
 										})}
 									/>{" "}
 									<br />
@@ -187,13 +187,13 @@ const startLottery = () => {
 									<input
 										className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight dark:text-white focus:outline-none focus:shadow-outline"
 										required
-										min={0}
+										min={5}
 										max={59}
 										type="number"
 										defaultValue={0}
 										{...register("minutes", {
 											required: true,
-											min: 0,
+											min: 5,
 											max: 59,
 										})}
 									/>{" "}
